@@ -161,7 +161,53 @@ Result:
 - We kept cities with **≥5 facilities** (`HAVING COUNT(*) >= 5`) to avoid ultra-tiny samples, but some results are still sensitive to small `total`.
 - Values are **unweighted by size**; one small hospital counts the same as a major academic center.
 
-**Nice variants.** Add the percentage column (and sort by it), or compute percentages **only among rated hospitals**:
+### 7) What is the overall ownership share by state?
+```sql
+--Ownership share by state
+SELECT state, hospital_ownership, COUNT(*) AS n
+FROM hospital_full_latest
+GROUP BY state, hospital_ownership
+ORDER BY state, n DESC;
+```
+Result:
+
+<img width="416" height="190" alt="Screen Shot 2025-10-14 at 12 43 14 PM" src="https://github.com/user-attachments/assets/bec208eb-9af9-4927-a41a-f4269b8781b1" />
+
+**Example — South Carolina (SC).** In the latest snapshot there are **66 facilities**.  
+Ownership mix (by facility count, unweighted):
+
+- **Voluntary non-profit – Private:** 31 (**~47.0%**)
+- **Proprietary:** 17 (**~25.8%**)
+- **Government – Hospital District/Authority:** 5 (**~7.6%**)
+- **Voluntary non-profit – Other:** 4 (**~6.1%**)
+- **Government – State:** 4 (**~6.1%**)
+- **Government – Local:** 2 (**~3.0%**)
+- **Veterans Health Administration:** 2 (**~3.0%**)
+- **Department of Defense:** 1 (**~1.5%**)
+
+**Interpretation.** SC is dominated by **non-profit private hospitals (~47%)** with a sizable **proprietary** presence (~26%). Public ownership is spread across state, local, and hospital-district entities (~17% combined), and there’s a small federal footprint (VHA/DoD ~4.5%). Counts include **all facilities** in the latest-per-facility view (rated and unrated) and are **not weighted** by beds or volume.
+
+**Why only an example?** The complete ownership-by-state table is **400+ rows**, which isn’t readable in a README. To keep the project concise, I show one illustrative state (my own) and provide the **full results as a CSV** for anyone who wants the complete breakdown.
+
+Full table: [`ownership_by_state.csv`](file:///Users/dessmith/Downloads/_Ownership_share_by_state_SELECT_state_hospital_ownership_COUNT__202510141257.csv)
+
+### 8) How many hospitals are missing a star rating by state?
+```sql
+--No ratings by state
+SELECT state, COUNT(*) AS no_rating
+FROM hospital_full_latest
+WHERE hospital_rating IS NULL
+GROUP BY state
+ORDER BY no_rating DESC;
+```
+Result:
+
+<img width="272" height="708" alt="Screen Shot 2025-10-14 at 12 35 38 PM" src="https://github.com/user-attachments/assets/cfc4025e-ad2b-453c-8cea-a352be2088a4" />
+<img width="272" height="421" alt="Screen Shot 2025-10-14 at 12 35 50 PM" src="https://github.com/user-attachments/assets/f8fecd09-a347-4ea8-86fe-e7c85eebb3ba" />
+
+
+
+
 
 
 
