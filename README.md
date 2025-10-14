@@ -189,7 +189,7 @@ Ownership mix (by facility count, unweighted):
 
 **Why only an example?** The complete ownership-by-state table is **400+ rows**, which isn’t readable in a README. To keep the project concise, I show one illustrative state (my own) and provide the **full results as a CSV** for anyone who wants the complete breakdown.
 
-Full table: [`ownership_by_state.csv`](https://sdmntprcentralus.oaiusercontent.com/files/00000000-8bb8-61f5-9d17-00135671698f/raw?se=2025-10-14T17%3A49%3A09Z&sp=r&sv=2024-08-04&sr=b&scid=3caa143d-10c4-5dd2-a285-4f4ced277483&skoid=e9d2f8b1-028a-4cff-8eb1-d0e66fbefcca&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-10-14T10%3A31%3A50Z&ske=2025-10-15T10%3A31%3A50Z&sks=b&skv=2024-08-04&sig=UNfffe7ucseO5U/mgVuYklisywDzCErpUECbtaOvLuU%3D)
+Full table: [`ownership_by_state.csv`](https://sdmntprcentralus.oaiusercontent.com/files/00000000-8bb8-61f5-9d17-00135671698f/raw?se=2025-10-14T17%3A49%3A09Z&sp=r&sv=2024-08-04&sr=b&scid=3caa143d-10c4-5dd2-a285-4f4ced277483&skoid=e9d2f8b1-028a-4cff-8eb1-d0e66fbefcca&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-10-14T10%3A31%3A50Z&ske=2025-10-15T10%3A31%3A50Z&sks=b&skv=2024-08-04&sig=UNfffe7ucseO5U/mgVuYklisywDzCErpUECbtaOvLuU%3D))
 
 ### 8) How many hospitals are missing a star rating by state?
 ```sql
