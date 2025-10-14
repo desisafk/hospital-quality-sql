@@ -209,6 +209,18 @@ Result:
 
 **About the “No rating” rows.** “No rating” does **not** imply poor performance. It usually means the hospital lacked enough measure data for a composite, is a specialty/exempt facility, is newly opened/closed, or the latest record was reported as **Not Available**. In this project, when computing any state-level averages or “% of 4–5★,” unrated hospitals are **excluded from numerators and denominators** and are reported separately as **coverage** (e.g., “TX: 218 unrated; X% of hospitals unrated”). This avoids bias from missingness while staying transparent about where rating gaps are concentrated.
 
+### Conclusion
+---
+This project turns two noisy CMS sources into an analysis-ready **latest-per-facility** view and uses it to answer practical questions stakeholders ask about hospital quality. By normalizing IDs, handling “Not Available” ratings explicitly, and collapsing to one record per hospital, the SQL ELT makes downstream analysis reliable and repeatable.
+
+**What the snapshot shows.**
+- The national distribution is center-weighted: **3–4★ hospitals dominate**, with fewer at the extremes and a **large unrated bucket** that must be handled carefully.
+- Cross-state comparisons depend on lens: **raw counts** highlight capacity (e.g., big systems in TX/CA/FL/NY), while **percentages** surface concentration (e.g., OR/ME/WI/UT/ID with higher shares of 4–5★).
+- **Ownership and type matter:** physician-owned and **Critical Access Hospitals** average higher in this snapshot, while some public/proprietary groups and large acute systems cluster lower—findings that likely reflect **case mix, scale, and service scope** rather than quality alone.
+- **Missingness is uneven.** Several states and territories have high counts of “No rating” facilities; treating these as **coverage** (not failures) keeps comparisons honest.
+
+
+
 
 
 
