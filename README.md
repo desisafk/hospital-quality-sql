@@ -89,4 +89,24 @@ Result:
 - This is an **unweighted mean per facility**; it doesn’t adjust for bed size, case mix, teaching status, or geography. Ownership groups with many small/rural hospitals (or different service mixes) can show different averages.
 - Small-`n` categories (e.g., VHA, Tribal, Federal) are **high-variance**; treat those averages as directional, not definitive.
 
+### 4) What impact does hospital types have on overall hospital star ratings?
+```sql
+SELECT hospital_type,
+       ROUND(AVG(hospital_rating)::numeric,2) AS avg_rating,
+       COUNT(*) AS n
+FROM hospital_full_latest
+WHERE hospital_rating IS NOT NULL
+GROUP BY hospital_type
+ORDER BY avg_rating DESC;
+```
+Result:
+
+<img width="495" height="86" alt="Screen Shot 2025-10-14 at 12 01 14 PM" src="https://github.com/user-attachments/assets/2b383d0e-5834-47c8-90e9-736c5d609403" />
+
+**Interpretation.** Averaging the latest star rating **by hospital type** shows a clear split: **Critical Access Hospitals (CAHs)** lead with **3.62 (n=638)**, while **Acute Care Hospitals** average **3.14 (n=2,752)**. The tiny **Acute Care – Veterans Administration** group appears lowest at **2.67 (n=3)**, but that sample is too small to generalize.
+
+**How to read this.**
+- `n` counts facilities with a **current** rating (NULLs excluded).
+- This is an **unweighted mean** per facility. CAHs are typically small rural hospitals with a narrower service mix; Acute Care hospitals are larger and handle more complex cases—those mix differences can influence averages.
+- Very small categories (e.g., VA, n=3) are **high-variance**; treat those values as directional only.
 
