@@ -189,7 +189,7 @@ Ownership mix (by facility count, unweighted):
 
 **Why only an example?** The complete ownership-by-state table is **400+ rows**, which isn’t readable in a README. To keep the project concise, I show one illustrative state (my own) and provide the **full results as a CSV** for anyone who wants the complete breakdown.
 
-Full table: [`ownership_by_state.csv`]([https://github.com/desisafk/hospital-quality-sql/blob/9789dc58853910bbc1b11694e4d6c80b9951c4f0/state-hospital-ownership.csv](https://github.com/desisafk/hospital-quality-sql/blob/2a041fe4263ea4c5f70f57284e99cbe88ca21d22/state-hospital-ownership.csv))
+Full table: [`ownership_by_state.csv`](https://github.com/desisafk/hospital-quality-sql/blob/96336a856576e7f4f310e55ff49940dce7b66fcd/state-hospital-ownership.csv)
 
 ### 8) How many hospitals are missing a star rating by state?
 ```sql
