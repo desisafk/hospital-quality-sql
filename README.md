@@ -136,18 +136,6 @@ Result:
 - This is an **unweighted** facility count; it doesn’t account for bed size, case mix, or teaching status.
 - Small denominators (e.g., states/territories with few hospitals) yield volatile percentages—treat with caution.
 
-```sql
-SELECT state,
-       SUM(CASE WHEN hospital_rating >= 4 THEN 1 ELSE 0 END) AS four_plus,
-       COUNT(*) FILTER (WHERE hospital_rating IS NOT NULL)     AS rated,
-       ROUND(100.0 * SUM(CASE WHEN hospital_rating >= 4 THEN 1 ELSE 0 END)
-                     / NULLIF(COUNT(*) FILTER (WHERE hospital_rating IS NOT NULL), 0), 1) AS pct_of_rated
-FROM hospital_full_latest
-GROUP BY state
-HAVING COUNT(*) FILTER (WHERE hospital_rating IS NOT NULL) >= 10  -- optional stability filter
-ORDER BY pct_of_rated DESC;
-
-
 ### 6) What cities have the most high-rated hospitals? (4-5★)
 ```sql
 --Cities with most high-rated hopsitals
