@@ -1,3 +1,437 @@
-state,hospital_ownership,n
+"state","hospital_ownership","n"
+AK,Government - Local,5
+AK,Tribal,5
+AK,Voluntary non-profit - Private,4
+AK,Voluntary non-profit - Church,3
+AK,Voluntary non-profit - Other,2
+AK,Department of Defense,2
+AK,Proprietary,2
+AK,Government - Federal,1
+AK,Government - State,1
+AL,Proprietary,31
+AL,Government - Hospital District or Authority,31
+AL,Voluntary non-profit - Private,17
+AL,Government - State,6
+AL,Voluntary non-profit - Other,4
+AL,Voluntary non-profit - Church,3
+AL,Veterans Health Administration,3
+AL,Government - Local,3
+AL,Government - Federal,1
+AR,Voluntary non-profit - Private,52
+AR,Proprietary,17
+AR,Government - Local,7
+AR,Voluntary non-profit - Church,3
+AR,Government - State,2
+AR,Veterans Health Administration,2
+AR,Physician,1
+AR,Voluntary non-profit - Other,1
+AS,Government - Hospital District or Authority,1
+AZ,Voluntary non-profit - Private,37
+AZ,Proprietary,34
+AZ,Voluntary non-profit - Other,11
+AZ,Government - Federal,5
+AZ,Government - Hospital District or Authority,4
+AZ,Physician,4
+AZ,Tribal,4
+AZ,Veterans Health Administration,3
+AZ,Voluntary non-profit - Church,2
+AZ,Government - State,1
+AZ,Government - Local,1
+CA,Voluntary non-profit - Private,144
+CA,Proprietary,96
+CA,Government - Hospital District or Authority,40
+CA,Voluntary non-profit - Other,38
+CA,Voluntary non-profit - Church,20
+CA,Government - Local,17
+CA,Veterans Health Administration,8
+CA,Government - State,6
+CA,Department of Defense,5
+CA,Physician,3
+CA,Government - Federal,2
+CO,Voluntary non-profit - Private,40
+CO,Government - Hospital District or Authority,21
+CO,Proprietary,12
+CO,Voluntary non-profit - Church,7
+CO,Voluntary non-profit - Other,6
+CO,Government - Local,5
+CO,Government - State,3
+CO,Veterans Health Administration,2
+CO,Department of Defense,1
+CT,Voluntary non-profit - Private,21
+CT,Proprietary,4
+CT,Government - State,4
+CT,Voluntary non-profit - Other,3
+CT,Voluntary non-profit - Church,2
+CT,Government - Local,1
+CT,Government - Federal,1
+CT,Veterans Health Administration,1
+DC,Voluntary non-profit - Other,3
+DC,Proprietary,3
+DC,Voluntary non-profit - Private,2
+DC,Government - State,1
+DC,Veterans Health Administration,1
+DE,Voluntary non-profit - Private,7
+DE,Proprietary,4
+DE,Veterans Health Administration,1
+DE,Government - State,1
+FL,Proprietary,83
+FL,Voluntary non-profit - Private,79
+FL,Government - Hospital District or Authority,23
+FL,Voluntary non-profit - Church,12
+FL,Voluntary non-profit - Other,7
+FL,Veterans Health Administration,7
+FL,Government - State,4
+FL,Government - Local,3
+FL,Department of Defense,2
+FL,Physician,1
+GA,Government - Hospital District or Authority,47
+GA,Voluntary non-profit - Private,35
+GA,Proprietary,33
+GA,Voluntary non-profit - Other,14
+GA,Government - State,4
+GA,Government - Local,4
+GA,Department of Defense,3
+GA,Veterans Health Administration,3
+GA,Government - Federal,2
+GA,Voluntary non-profit - Church,1
+GU,Voluntary non-profit - Private,1
+GU,Government - Local,1
+HI,Voluntary non-profit - Private,10
+HI,Government - State,8
+HI,Proprietary,2
+HI,Government - Federal,1
+HI,Voluntary non-profit - Other,1
+HI,Voluntary non-profit - Church,1
+HI,Department of Defense,1
+IA,Government - Local,47
+IA,Voluntary non-profit - Private,47
+IA,Voluntary non-profit - Other,8
+IA,Voluntary non-profit - Church,7
+IA,Proprietary,3
+IA,Government - State,3
+IA,Veterans Health Administration,2
+IA,Physician,1
+IA,Government - Hospital District or Authority,1
+ID,Voluntary non-profit - Private,17
+ID,Proprietary,9
+ID,Government - Local,8
+ID,Government - Hospital District or Authority,7
+ID,Voluntary non-profit - Other,2
+ID,Voluntary non-profit - Church,2
+ID,Government - State,1
+ID,Veterans Health Administration,1
+ID,Physician,1
+IL,Voluntary non-profit - Private,91
+IL,Voluntary non-profit - Church,36
+IL,Proprietary,20
+IL,Government - Hospital District or Authority,13
+IL,Voluntary non-profit - Other,12
+IL,Government - Local,10
+IL,Government - State,7
+IL,Veterans Health Administration,5
+IL,Physician,1
+IN,Voluntary non-profit - Private,65
+IN,Proprietary,31
+IN,Government - Local,23
+IN,Voluntary non-profit - Church,14
+IN,Voluntary non-profit - Other,7
+IN,Physician,4
+IN,Government - State,3
+IN,Veterans Health Administration,2
+KS,Government - Local,40
+KS,Voluntary non-profit - Private,36
+KS,Government - Hospital District or Authority,20
+KS,Proprietary,14
+KS,Voluntary non-profit - Church,8
+KS,Voluntary non-profit - Other,8
+KS,Physician,5
+KS,Veterans Health Administration,2
+KS,Government - State,2
+KS,Department of Defense,1
+KY,Voluntary non-profit - Private,45
+KY,Proprietary,21
+KY,Voluntary non-profit - Other,9
+KY,Voluntary non-profit - Church,8
+KY,Government - Local,6
+KY,Government - Hospital District or Authority,5
+KY,Government - Federal,3
+KY,Veterans Health Administration,2
+KY,Government - State,2
+KY,Department of Defense,1
+LA,Proprietary,58
+LA,Government - Hospital District or Authority,38
+LA,Voluntary non-profit - Private,37
+LA,Physician,11
+LA,Voluntary non-profit - Other,4
+LA,Government - State,3
+LA,Veterans Health Administration,3
+LA,Voluntary non-profit - Church,1
+LA,Government - Federal,1
+LA,Department of Defense,1
+MA,Voluntary non-profit - Private,43
+MA,Proprietary,22
+MA,Voluntary non-profit - Other,6
+MA,Government - State,5
+MA,Government - Federal,3
+MA,Veterans Health Administration,3
+MA,Government - Local,1
+MD,Voluntary non-profit - Private,38
+MD,Voluntary non-profit - Other,7
+MD,Voluntary non-profit - Church,3
+MD,Government - State,3
+MD,Veterans Health Administration,2
+MD,Government - Local,1
+MD,Department of Defense,1
+MD,Proprietary,1
+ME,Voluntary non-profit - Private,23
+ME,Proprietary,3
+ME,Voluntary non-profit - Church,3
+ME,Voluntary non-profit - Other,2
+ME,Government - Local,2
+ME,Government - Hospital District or Authority,2
+ME,Government - Federal,1
+ME,Government - State,1
+ME,Veterans Health Administration,1
+MI,Voluntary non-profit - Private,68
+MI,Voluntary non-profit - Other,22
+MI,Proprietary,21
+MI,Voluntary non-profit - Church,12
+MI,Government - Local,8
+MI,Government - Hospital District or Authority,7
+MI,Veterans Health Administration,4
+MI,Government - State,4
+MI,Government - Federal,1
+MN,Voluntary non-profit - Private,77
+MN,Government - Local,17
+MN,Government - Hospital District or Authority,12
+MN,Voluntary non-profit - Other,10
+MN,Government - State,8
+MN,Voluntary non-profit - Church,6
+MN,Veterans Health Administration,2
+MN,Government - Federal,2
+MN,Proprietary,1
+MO,Voluntary non-profit - Private,47
+MO,Government - Local,17
+MO,Proprietary,17
+MO,Voluntary non-profit - Other,11
+MO,Government - Hospital District or Authority,9
+MO,Voluntary non-profit - Church,8
+MO,Government - State,6
+MO,Veterans Health Administration,4
+MO,Department of Defense,1
+MP,Voluntary non-profit - Other,1
+MS,Government - Local,32
+MS,Voluntary non-profit - Private,25
+MS,Proprietary,23
+MS,Government - State,8
+MS,Voluntary non-profit - Other,5
+MS,Veterans Health Administration,2
+MS,Voluntary non-profit - Church,2
+MS,Department of Defense,1
+MS,Government - Federal,1
+MT,Voluntary non-profit - Private,47
+MT,Government - Hospital District or Authority,6
+MT,Government - Federal,3
+MT,Voluntary non-profit - Church,2
+MT,Veterans Health Administration,1
+MT,Voluntary non-profit - Other,1
+MT,Proprietary,1
+MT,Government - Local,1
+MT,Physician,1
+NC,Voluntary non-profit - Private,55
+NC,Proprietary,18
+NC,Government - Hospital District or Authority,15
+NC,Government - Local,11
+NC,Voluntary non-profit - Other,7
+NC,Government - State,7
+NC,Veterans Health Administration,4
+NC,Department of Defense,2
+NC,Government - Federal,2
+NC,Voluntary non-profit - Church,1
+ND,Voluntary non-profit - Private,31
+ND,Voluntary non-profit - Church,9
+ND,Government - Local,2
+ND,Government - Federal,2
+ND,Government - State,1
+ND,Veterans Health Administration,1
+ND,Proprietary,1
+NE,Voluntary non-profit - Private,37
+NE,Government - Local,25
+NE,Voluntary non-profit - Church,8
+NE,Government - Hospital District or Authority,8
+NE,Proprietary,5
+NE,Voluntary non-profit - Other,4
+NE,Physician,2
+NE,Government - State,1
+NE,Veterans Health Administration,1
+NE,Tribal,1
+NH,Voluntary non-profit - Private,22
+NH,Proprietary,4
+NH,Voluntary non-profit - Other,1
+NH,Government - State,1
+NJ,Voluntary non-profit - Private,53
+NJ,Proprietary,10
+NJ,Government - State,6
+NJ,Voluntary non-profit - Church,3
+NJ,Voluntary non-profit - Other,2
+NJ,Government - Local,2
+NJ,Veterans Health Administration,1
+NM,Proprietary,15
+NM,Voluntary non-profit - Private,14
+NM,Government - Federal,5
+NM,Government - Local,3
+NM,Voluntary non-profit - Other,2
+NM,Government - Hospital District or Authority,2
+NM,Government - State,2
+NM,Veterans Health Administration,1
+NV,Proprietary,21
+NV,Voluntary non-profit - Private,12
+NV,Government - Hospital District or Authority,6
+NV,Veterans Health Administration,2
+NV,Government - State,2
+NV,Department of Defense,1
+NV,Voluntary non-profit - Other,1
+NY,Voluntary non-profit - Private,120
+NY,Government - State,26
+NY,Voluntary non-profit - Other,11
+NY,Government - Local,11
+NY,Veterans Health Administration,9
+NY,Voluntary non-profit - Church,6
+NY,Proprietary,5
+NY,Department of Defense,1
+OH,Voluntary non-profit - Private,103
+OH,Proprietary,31
+OH,Voluntary non-profit - Other,25
+OH,Voluntary non-profit - Church,12
+OH,Government - Local,9
+OH,Government - State,6
+OH,Veterans Health Administration,4
+OH,Government - Hospital District or Authority,3
+OH,Department of Defense,1
+OK,Voluntary non-profit - Private,35
+OK,Proprietary,26
+OK,Government - Hospital District or Authority,22
+OK,Government - Local,11
+OK,Physician,10
+OK,Voluntary non-profit - Other,9
+OK,Government - State,6
+OK,Voluntary non-profit - Church,4
+OK,Tribal,4
+OK,Government - Federal,2
+OK,Veterans Health Administration,2
+OR,Voluntary non-profit - Private,26
+OR,Voluntary non-profit - Church,14
+OR,Government - Hospital District or Authority,11
+OR,Voluntary non-profit - Other,5
+OR,Proprietary,2
+OR,Veterans Health Administration,2
+OR,Government - Local,1
+OR,Government - State,1
+PA,Voluntary non-profit - Private,121
+PA,Proprietary,27
+PA,Voluntary non-profit - Other,19
+PA,Veterans Health Administration,7
+PA,Government - State,6
+PA,Physician,4
+PA,Voluntary non-profit - Church,2
+PA,Government - Hospital District or Authority,1
+PR,Proprietary,27
+PR,Voluntary non-profit - Private,23
+PR,Government - State,6
+PR,Voluntary non-profit - Other,1
+PR,Veterans Health Administration,1
+PR,Voluntary non-profit - Church,1
+PR,Government - Local,1
+RI,Voluntary non-profit - Private,8
+RI,Proprietary,3
+RI,Tribal,1
+RI,Veterans Health Administration,1
 SC,Voluntary non-profit - Private,31
 SC,Proprietary,17
+SC,Government - Hospital District or Authority,5
+SC,Voluntary non-profit - Other,4
+SC,Government - State,4
+SC,Government - Local,2
+SC,Veterans Health Administration,2
+SC,Department of Defense,1
+SD,Voluntary non-profit - Private,42
+SD,Proprietary,6
+SD,Government - Local,5
+SD,Government - Federal,3
+SD,Voluntary non-profit - Other,2
+SD,Veterans Health Administration,2
+SD,Voluntary non-profit - Church,1
+SD,Government - State,1
+TN,Proprietary,43
+TN,Voluntary non-profit - Private,32
+TN,Government - Hospital District or Authority,12
+TN,Government - Local,12
+TN,Voluntary non-profit - Other,9
+TN,Voluntary non-profit - Church,7
+TN,Veterans Health Administration,4
+TN,Government - State,2
+TX,Proprietary,174
+TX,Voluntary non-profit - Private,115
+TX,Government - Hospital District or Authority,82
+TX,Physician,20
+TX,Voluntary non-profit - Other,17
+TX,Government - State,15
+TX,Government - Local,13
+TX,Voluntary non-profit - Church,11
+TX,Veterans Health Administration,5
+TX,Department of Defense,3
+TX,Government - Federal,1
+UT,Voluntary non-profit - Private,25
+UT,Proprietary,15
+UT,Voluntary non-profit - Other,6
+UT,Government - State,2
+UT,Government - Hospital District or Authority,1
+UT,Veterans Health Administration,1
+UT,Government - Local,1
+VA,Voluntary non-profit - Private,49
+VA,Proprietary,20
+VA,Voluntary non-profit - Other,9
+VA,Government - State,7
+VA,Government - Hospital District or Authority,3
+VA,Veterans Health Administration,3
+VA,Department of Defense,2
+VA,Voluntary non-profit - Church,2
+VI,Government - State,1
+VI,Government - Local,1
+VT,Voluntary non-profit - Private,13
+VT,Voluntary non-profit - Other,2
+VT,Veterans Health Administration,1
+VT,Government - State,1
+WA,Government - Hospital District or Authority,39
+WA,Voluntary non-profit - Private,31
+WA,Voluntary non-profit - Church,11
+WA,Voluntary non-profit - Other,6
+WA,Proprietary,5
+WA,Government - Local,3
+WA,Government - State,2
+WA,Veterans Health Administration,2
+WA,Department of Defense,1
+WI,Voluntary non-profit - Private,98
+WI,Voluntary non-profit - Church,12
+WI,Voluntary non-profit - Other,9
+WI,Proprietary,8
+WI,Government - Local,5
+WI,Veterans Health Administration,3
+WI,Physician,3
+WI,Government - Hospital District or Authority,2
+WI,Government - State,2
+WV,Voluntary non-profit - Private,30
+WV,Proprietary,7
+WV,Government - Local,6
+WV,Veterans Health Administration,4
+WV,Government - State,3
+WV,Voluntary non-profit - Other,2
+WV,Voluntary non-profit - Church,2
+WV,Physician,1
+WY,Government - Hospital District or Authority,14
+WY,Government - Local,6
+WY,Proprietary,3
+WY,Veterans Health Administration,2
+WY,Voluntary non-profit - Private,2
+WY,Voluntary non-profit - Other,2
+WY,Physician,1
