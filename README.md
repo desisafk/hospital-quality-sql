@@ -205,6 +205,11 @@ Result:
 <img width="272" height="708" alt="Screen Shot 2025-10-14 at 12 35 38 PM" src="https://github.com/user-attachments/assets/cfc4025e-ad2b-453c-8cea-a352be2088a4" />
 <img width="272" height="421" alt="Screen Shot 2025-10-14 at 12 35 50 PM" src="https://github.com/user-attachments/assets/f8fecd09-a347-4ea8-86fe-e7c85eebb3ba" />
 
+**Interpretation.** This table counts hospitals **without a CMS overall star rating** (`hospital_rating IS NULL`) and orders states/territories by raw count. The largest concentrations are in big hospital markets—**TX (218)**, **CA (106)**, **LA (85)**, **KS (70)**, **OK (69)**, **MN (69)**, **OH (62)**, **PA (60)**, **NY (58)**, **FL (57)**—with additional clusters across **AZ/PR (52 each)** and many smaller counts elsewhere. Because these are **raw counts**, they mostly reflect how many hospitals a state has and its facility mix (e.g., more specialty or newly opened hospitals), not necessarily data quality. Also note the dataset includes **territories and DC** (e.g., PR, GU, AS, MP, DC), so it’s broader than the 50 states. For cross-state comparisons, a more informative lens is **% unrated** (unrated ÷ total hospitals in the state) rather than counts alone.
+
+**About the “No rating” rows.** “No rating” does **not** imply poor performance. It usually means the hospital lacked enough measure data for a composite, is a specialty/exempt facility, is newly opened/closed, or the latest record was reported as **Not Available**. In this project, when computing any state-level averages or “% of 4–5★,” unrated hospitals are **excluded from numerators and denominators** and are reported separately as **coverage** (e.g., “TX: 218 unrated; X% of hospitals unrated”). This avoids bias from missingness while staying transparent about where rating gaps are concentrated.
+
+
 
 
 
