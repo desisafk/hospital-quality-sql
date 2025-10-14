@@ -9,9 +9,9 @@
 - [CMS Overall Hospital Quality Star Rating](https://data.cms.gov/provider-data/topics/hospitals/overall-hospital-quality-star-rating/)
 
 **SQL Analysis (Code):**  
-- [`sql/01_views.sql`]([VIEWS:JOINS.sql](https://github.com/desisafk/hospital-quality-sql/blob/776f55b787456f8285e5a219599cdd5f2f0199e6/VIEWS%3AJOINS.sql)) — views (clean → typed → joined → latest)  
-- [`sql/02_qa.sql`](sql/02_qa.sql) — data quality checks  
-- [`sql/03_analysis.sql`](sql/03_analysis.sql) — core analysis queries
+- [`sql/01_views.sql`](https://github.com/desisafk/hospital-quality-sql/blob/776f55b787456f8285e5a219599cdd5f2f0199e6/VIEWS%3AJOINS.sql) — views (clean → typed → joined → latest)  
+- [`sql/02_qa.sql`](https://github.com/desisafk/hospital-quality-sql/blob/b7dada8352ffe789b5e14b96a1484f2ef85b8d9c/QA%20CODE.sql) — data quality checks  
+- [`sql/03_analysis.sql`](https://github.com/desisafk/hospital-quality-sql/blob/b7dada8352ffe789b5e14b96a1484f2ef85b8d9c/CORE%20QUERIES.sql) — core analysis queries
 
 ---
 
