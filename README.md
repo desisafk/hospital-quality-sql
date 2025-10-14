@@ -91,6 +91,7 @@ Result:
 
 ### 4) What impact does hospital types have on overall hospital star ratings?
 ```sql
+--Hospital type vs rating
 SELECT hospital_type,
        ROUND(AVG(hospital_rating)::numeric,2) AS avg_rating,
        COUNT(*) AS n
@@ -110,3 +111,52 @@ Result:
 - This is an **unweighted mean** per facility. CAHs are typically small rural hospitals with a narrower service mix; Acute Care hospitals are larger and handle more complex cases—those mix differences can influence averages.
 - Very small categories (e.g., VA, n=3) are **high-variance**; treat those values as directional only.
 
+### 5) What states have the most high-rated hospitals? (4-5★)
+```sql
+--States with most high-rated hospitals
+SELECT state,
+       SUM(CASE WHEN hospital_rating >= 4 THEN 1 ELSE 0 END) AS four_plus,
+       COUNT(*) AS total,
+       ROUND(100.0 * SUM(CASE WHEN hospital_rating >= 4 THEN 1 ELSE 0 END)
+                    / NULLIF(COUNT(*),0), 1) AS pct_four_plus
+FROM hospital_full_latest
+GROUP BY state
+ORDER BY four_plus DESC;
+```
+Result:
+
+<img width="527" height="708" alt="Screen Shot 2025-10-14 at 12 08 54 PM" src="https://github.com/user-attachments/assets/e5e8b9bf-93ac-4020-90d1-b5339a86a1b4" />
+<img width="526" height="440" alt="Screen Shot 2025-10-14 at 12 09 08 PM" src="https://github.com/user-attachments/assets/c236d2af-0175-4a08-881d-2b0f7b800efe" />
+
+**Interpretation.** Ranking **states by the count of high-rated hospitals (4–5★)** highlights big systems by sheer volume—**TX = 101/456 (22.1%)**, **CA = 90/379 (23.7%)**, **OH = 71/194 (36.6%)**, **IL = 64/195 (32.8%)**. But looking at the **concentration** (the `%` column) tells a different story: mid-sized states such as **OR = 37/62 (59.7%)**, **ME = 21/38 (55.3%)**, **WI = 72/142 (50.7%)**, **UT = 25/51 (49.0%)**, and **ID = 22/48 (45.8%)** have a much higher share of 4–5★ facilities. At the low end, large/diverse systems like **NY = 21/189 (11.1%)** and **LA = 16/157 (10.2%)** show lower concentration despite many hospitals overall.  
+**Takeaway:** use **both** the raw count (capacity) and the percentage (quality concentration) to compare states fairly.
+
+**How to read this.**
+- `total` includes **all** facilities in the latest snapshot, even those with **no rating**; that’s why percentages can be lower in states with many unrated hospitals.
+- This is an **unweighted** facility count; it doesn’t account for bed size, case mix, or teaching status.
+- Small denominators (e.g., states/territories with few hospitals) yield volatile percentages—treat with caution.
+
+```sql
+SELECT state,
+       SUM(CASE WHEN hospital_rating >= 4 THEN 1 ELSE 0 END) AS four_plus,
+       COUNT(*) FILTER (WHERE hospital_rating IS NOT NULL)     AS rated,
+       ROUND(100.0 * SUM(CASE WHEN hospital_rating >= 4 THEN 1 ELSE 0 END)
+                     / NULLIF(COUNT(*) FILTER (WHERE hospital_rating IS NOT NULL), 0), 1) AS pct_of_rated
+FROM hospital_full_latest
+GROUP BY state
+HAVING COUNT(*) FILTER (WHERE hospital_rating IS NOT NULL) >= 10  -- optional stability filter
+ORDER BY pct_of_rated DESC;
+
+
+### 6) What cities have the most high-rated hospitals? (4-5★)
+```sql
+--Cities with most high-rated hopsitals
+SELECT city, state,
+       SUM(CASE WHEN hospital_rating >= 4 THEN 1 ELSE 0 END) AS four_plus,
+       COUNT(*) AS total
+FROM hospital_full_latest
+GROUP BY city, state
+HAVING COUNT(*) >= 5
+ORDER BY four_plus DESC, total DESC;
+```
+Result: 
