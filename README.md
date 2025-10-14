@@ -148,3 +148,22 @@ HAVING COUNT(*) >= 5
 ORDER BY four_plus DESC, total DESC;
 ```
 Result: 
+
+<img width="491" height="707" alt="Screen Shot 2025-10-14 at 12 16 42 PM" src="https://github.com/user-attachments/assets/21f6196f-9054-4137-8252-c75916ffcb7e" />
+<img width="487" height="642" alt="Screen Shot 2025-10-14 at 12 16 55 PM" src="https://github.com/user-attachments/assets/bb770769-2f0e-4572-806c-8302ec192952" />
+<img width="491" height="681" alt="Screen Shot 2025-10-14 at 12 17 58 PM" src="https://github.com/user-attachments/assets/c914ec4d-2232-40e0-9b2d-95b6354bd9bd" />
+<img width="491" height="120" alt="Screen Shot 2025-10-14 at 12 18 09 PM" src="https://github.com/user-attachments/assets/4e1c59d3-f4e7-4593-a304-253a29ae2dc7" />
+
+**Interpretation.** Counting **high-rated hospitals (4–5★) by city** surfaces the biggest hubs by volume—e.g., **Houston, TX = 7/28**, **Oklahoma City, OK = 5/19**, **Dallas, TX = 5/19**, **Austin, TX = 5/16**. But looking at **concentration** tells a richer story: several mid-size markets have a much higher share of 4–5★ facilities, like **Portland, OR = 5/9 (~55.6%)**, **Green Bay, WI = 4/7 (~57.1%)**, **Honolulu, HI = 4/6 (~66.7%)**, **Fort Worth, TX = 5/12 (~41.7%)**, **Seattle, WA = 4/9 (~44.4%)**, and **Omaha, NE = 5/11 (~45.5%)**. By contrast, very large metros (**Chicago 4/35 ≈ 11.4%**, **Los Angeles 3/19 ≈ 15.8%**, **New York 4/16 = 25.0%**) have many hospitals but a lower high-rating share—likely reflecting broader case-mix and hospital-type diversity.
+
+**How to read this.**
+- `total` counts **all** facilities in the city snapshot (including **unrated**), so % can be pulled down where there are many “No rating” hospitals.
+- We kept cities with **≥5 facilities** (`HAVING COUNT(*) >= 5`) to avoid ultra-tiny samples, but some results are still sensitive to small `total`.
+- Values are **unweighted by size**; one small hospital counts the same as a major academic center.
+
+**Nice variants.** Add the percentage column (and sort by it), or compute percentages **only among rated hospitals**:
+
+
+
+
+
