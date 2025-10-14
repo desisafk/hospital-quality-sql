@@ -44,6 +44,7 @@ Result:
 
 ### 2) What is the average rating by state? (10 hospital minimum)
 ```sql
+--Avg rating by state (10 hospital min)
 SELECT state,
        ROUND(AVG(hospital_rating)::numeric,2) AS avg_rating,
        COUNT(*) AS n
@@ -57,4 +58,35 @@ Result:
 
 <img width="360" height="707" alt="Screen Shot 2025-10-14 at 11 43 18 AM" src="https://github.com/user-attachments/assets/698e1524-fdcb-44e5-b208-ec073a64fafc" />
 <img width="357" height="301" alt="Screen Shot 2025-10-14 at 11 43 28 AM" src="https://github.com/user-attachments/assets/b7f40431-9687-482e-a76d-56f83d201c8b" />
+
+**Interpretation.** Averaging the latest available star rating **by state** (and requiring **≥10 rated hospitals** to avoid tiny samples) shows a clear spread across the country. In this snapshot, states like **UT (4.03, n=32)**, **HI (4.00, n=11)**, **OR (3.94, n=50)**, **MN (3.91, n=66)**, and **WI (3.91, n=101)** sit at the top end, while larger systems such as **CA (3.01, n=273)** and **NY (2.31, n=131)** land lower on the list. Mid-pack states cluster around ~3.3–3.7 (e.g., **CO 3.88, n=51**; **IN 3.61, n=103**; **TX 3.34, n=238**). This pattern suggests most states hover near “average to above average,” with a handful of consistent standouts.
+
+**How to read this.**
+- We **exclude NULL ratings**, so states with many “Not Available” facilities may have fewer counted hospitals (smaller `n`), which can swing the average.
+- The threshold **`HAVING COUNT(*) >= 10`** filters out ultra-small samples; e.g., HI (n=11) barely clears the bar—its mean is informative but still sensitive to a few hospitals.
+- This is a **simple mean** over facilities; it’s **not weighted** by bed count, case mix, or population. Large states (e.g., CA, NY, FL) include many diverse hospital types, which can pull the average down relative to smaller, more homogeneous states.
+- Values reflect the **latest rating per facility**, not a multi-year trend; states can move as new ratings are published.
+
+### 3) What impact do various ownership types have on overall hospital star ratings?
+```sql
+--Ownership vs rating
+SELECT hospital_ownership,
+       ROUND(AVG(hospital_rating)::numeric,2) AS avg_rating,
+       COUNT(*) AS n
+FROM hospital_full_latest
+WHERE hospital_rating IS NOT NULL
+GROUP BY hospital_ownership
+ORDER BY avg_rating DESC;
+```
+Result:
+
+<img width="527" height="245" alt="Screen Shot 2025-10-14 at 11 54 32 AM" src="https://github.com/user-attachments/assets/a692b4c5-d71e-464f-a264-8c5300a678af" />
+
+**Interpretation.** Averaging the latest star rating **by ownership** shows meaningful differences. In this snapshot, **Physician-owned hospitals** rank highest (3.73, n=22), followed by **Voluntary non-profit** groups—Church (3.41, n=243), Private (3.34, n=1,696), and Other (3.29, n=291). Public entities tend to sit mid-pack—**Government–Local** (3.21, n=226) and **Hospital District/Authority** (3.12, n=313)—while **Proprietary** hospitals average lower (2.88, n=544). Very small categories such as **Government–Federal** (2.75, n=12), **VHA** (2.67, n=3), and **Tribal** (2.50, n=4) appear at the bottom but have tiny sample sizes.
+
+**How to read this.**
+- We **exclude NULL ratings**, so `n` reflects only facilities with a current star rating.
+- This is an **unweighted mean per facility**; it doesn’t adjust for bed size, case mix, teaching status, or geography. Ownership groups with many small/rural hospitals (or different service mixes) can show different averages.
+- Small-`n` categories (e.g., VHA, Tribal, Federal) are **high-variance**; treat those averages as directional, not definitive.
+
 
